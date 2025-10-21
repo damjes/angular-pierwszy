@@ -1,10 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { Wlasny } from "./wlasny/wlasny";
+import { Pudelko } from "./pudelko/pudelko";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Wlasny],
+  imports: [Wlasny, Pudelko],
   templateUrl: './app.html',
   styleUrl: './app.sass'
 })
