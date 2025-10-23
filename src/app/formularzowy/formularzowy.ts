@@ -16,7 +16,7 @@ export class Formularzowy {
 
   zwieksz() {
     this.ileRazy++;
-    if (this.ileRazy % 5 === 0) {
+    if (this.ileRazy > 5) {
       this.wielokrotnieKlikniete = true;
     }
   }
