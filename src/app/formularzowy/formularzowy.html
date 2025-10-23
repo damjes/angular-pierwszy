@@ -1,4 +1,14 @@
 <div class="card my-3 p-3">
-	<h2>Siema, {{ imie }}!</h2>
-	<input type="text" name="input-imie" id="input-imie" class="form-control" [(ngModel)]="imie">
+	<h2
+		[ngStyle]="{ 'background-color': kolorTla }"
+		[ngClass]="{ 'text-danger': wielokrotnieKlikniete }">
+		Siema, {{ imie }}!
+	</h2>
+	<input type="text" name="input-imie" id="input-imie" class="form-control my-3" [(ngModel)]="imie" />
+	<button type="button" (click)="zwieksz()" class="btn btn-primary my-3">
+		Kliknięto mnie {{ ileRazy }} razy.
+	</button>
+	<button type="button" (click)="zmienKolor()" class="btn btn-secondary my-3">
+		Zmień kolor tła nagłówka
+	</button>
 </div>
