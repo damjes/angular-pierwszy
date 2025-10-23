@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-formularzowy',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './formularzowy.html',
   styleUrl: './formularzowy.sass',
 })
 export class Formularzowy {
-
+  imie: string = 'Damjes';
 }
