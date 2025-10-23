@@ -24,4 +24,11 @@ export class Formularzowy {
   zmienKolor() {
     this.kolorTla = this.kolorTla === 'white' ? 'lightblue' : 'white';
   }
+
+  resetuj() {
+    this.imie = 'Damjes';
+    this.ileRazy = 0;
+    this.kolorTla = 'white';
+    this.wielokrotnieKlikniete = false;
+  }
 }
