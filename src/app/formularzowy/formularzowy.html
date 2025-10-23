@@ -1,15 +1,23 @@
-<div class="card my-3 p-3">
+<div class="card my-3 p-3" [ngStyle]="{ 'background-color': kolorTla }">
 	<h2
-		[ngStyle]="{ 'background-color': kolorTla }"
-		[ngClass]="{ 'text-danger': wielokrotnieKlikniete }">
+		[ngStyle]="{ 'background-color': kolorTlaNaglowka }"
+		[ngClass]="{ 'text-danger': wielokrotnieKlikniete }"
+		class="p-2 rounded">
 		Siema, {{ imie }}!
 	</h2>
 	<input type="text" name="input-imie" id="input-imie" class="form-control my-3" [(ngModel)]="imie" />
 	<button type="button" (click)="zwieksz()" class="btn btn-primary my-3">
 		Kliknięto mnie {{ ileRazy }} razy.
 	</button>
-	<button type="button" (click)="zmienKolor()" class="btn btn-secondary my-3">
+	<button type="button" (click)="zmienKolorNaglowka()" class="btn btn-secondary my-3">
 		Zmień kolor tła nagłówka
 	</button>
-	<button type="button" (click)="resetuj()" class="btn btn-danger">Reset</button>
+	<button type="button" (click)="resetuj()" class="btn btn-danger my-3">Reset</button>
+	<label for="kolorek">Pornește Tricolorul!</label>
+	<select name="kolorek" id="kolorek" class="form-control mb-3" [(ngModel)]="kolorTla">
+		<option value="white"></option>
+		<option value="powderblue">Niebieski</option>
+		<option value="lemonchiffon">Złoty</option>
+		<option value="salmon">Czerwony</option>
+	</select>
 </div>

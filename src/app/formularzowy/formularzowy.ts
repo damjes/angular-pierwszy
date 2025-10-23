@@ -12,6 +12,7 @@ export class Formularzowy {
   imie: string = 'Damjes';
   ileRazy: number = 0;
   kolorTla: string = 'white';
+  kolorTlaNaglowka: string = 'lightgray';
   wielokrotnieKlikniete: boolean = false;
 
   zwieksz() {
@@ -21,8 +22,8 @@ export class Formularzowy {
     }
   }
 
-  zmienKolor() {
-    this.kolorTla = this.kolorTla === 'white' ? 'lightblue' : 'white';
+  zmienKolorNaglowka() {
+    this.kolorTlaNaglowka = this.kolorTlaNaglowka === 'lightgray' ? 'palegreen' : 'lightgray';
   }
 
   resetuj() {
