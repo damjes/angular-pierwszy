@@ -11,7 +11,7 @@
     </thead>
     <tbody>
       @for (student of studenci; track student.imie) {
-      <tr>
+      <tr [class.table-info]="student.wiek > 30">
         <td>{{ student.imie }}</td>
         <td>{{ student.wiek }}</td>
       </tr>
