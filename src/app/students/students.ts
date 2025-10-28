@@ -1,26 +1,36 @@
 import { Component } from '@angular/core';
+import { NgIf, NgFor } from '@angular/common';
 
 export type Student = {
-  imię: string;
+  imie: string;
   wiek: number;
 };
 
 @Component({
   selector: 'app-students',
-  imports: [],
+  imports: [NgIf, NgFor],
   templateUrl: './students.html',
   styleUrl: './students.sass',
 })
 export class Students {
-  studenci: Student[] = [
-    { imię: 'Jan', wiek: 21 },
-    { imię: 'Paweł', wiek: 37 },
-    { imię: 'Drugi', wiek: 2137 },
+  studenci1: Student[] = [
+    { imie: 'Jan', wiek: 21 },
+    { imie: 'Paweł', wiek: 37 },
+    { imie: 'Drugi', wiek: 2137 },
   ];
 
-  widać: boolean = true;
+  studenci: Student[] = this.studenci1;
 
-  przełączWidoczność() {
-    this.widać = !this.widać;
+  czyStudenci: boolean = true;
+
+  toggleCzyStudenci() {
+    this.czyStudenci = !this.czyStudenci;
+    this.studenci = this.czyStudenci ? this.studenci1 : [];
+  }
+
+  widac: boolean = true;
+
+  przelaczWidocznosc() {
+    this.widac = !this.widac;
   }
 }

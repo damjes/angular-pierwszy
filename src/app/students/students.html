@@ -1,1 +1,24 @@
-<p>students works!</p>
+<div *ngIf="widac">
+  <h2>Lista studentów</h2>
+  <table class="table" *ngIf="studenci.length > 0">
+    <thead>
+      <tr>
+        <th>Imię</th>
+        <th>Wiek</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of studenci">
+        <td>{{ student.imie }}</td>
+        <td>{{ student.wiek }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="alert alert-warning" *ngIf="studenci.length === 0">Nie ma studentów</p>
+</div>
+<button class="btn btn-primary" (click)="przelaczWidocznosc()">
+  {{ widac ? 'Ukryj' : 'Pokaż' }} listę studentów
+</button>
+<button class="btn btn-secondary" (click)="toggleCzyStudenci()">
+  {{ czyStudenci ? 'Ukryj' : 'Pokaż' }} studentów
+</button>
