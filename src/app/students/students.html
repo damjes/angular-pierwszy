@@ -1,5 +1,5 @@
-@if(widac) {
-<div>
+<div class="my-4">
+  @if(widac) {
   <h2>Lista studentów</h2>
   @if(studenci.length > 0) {
   <table class="table">
@@ -20,12 +20,11 @@
   </table>
   } @else {
   <p class="alert alert-warning">Nie ma studentów</p>
-  }
+  } }
+  <button class="btn btn-primary" (click)="przelaczWidocznosc()">
+    {{ widac ? 'Ukryj' : 'Pokaż' }} listę studentów
+  </button>
+  <button class="btn btn-secondary" (click)="toggleCzyStudenci()">
+    {{ czyStudenci ? 'Ukryj' : 'Pokaż' }} studentów
+  </button>
 </div>
-}
-<button class="btn btn-primary" (click)="przelaczWidocznosc()">
-  {{ widac ? 'Ukryj' : 'Pokaż' }} listę studentów
-</button>
-<button class="btn btn-secondary" (click)="toggleCzyStudenci()">
-  {{ czyStudenci ? 'Ukryj' : 'Pokaż' }} studentów
-</button>
