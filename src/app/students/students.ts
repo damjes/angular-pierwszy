@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgIf, NgFor } from '@angular/common';
 
 export type Student = {
   imie: string;
@@ -8,7 +7,7 @@ export type Student = {
 
 @Component({
   selector: 'app-students',
-  imports: [NgIf, NgFor],
+  imports: [],
   templateUrl: './students.html',
   styleUrl: './students.sass',
 })

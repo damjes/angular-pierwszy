@@ -1,6 +1,8 @@
-<div *ngIf="widac">
+@if(widac) {
+<div>
   <h2>Lista studentów</h2>
-  <table class="table" *ngIf="studenci.length > 0">
+  @if(studenci.length > 0) {
+  <table class="table">
     <thead>
       <tr>
         <th>Imię</th>
@@ -8,14 +10,19 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let student of studenci">
+      @for (student of studenci; track student.imie) {
+      <tr>
         <td>{{ student.imie }}</td>
         <td>{{ student.wiek }}</td>
       </tr>
+      }
     </tbody>
   </table>
-  <p class="alert alert-warning" *ngIf="studenci.length === 0">Nie ma studentów</p>
+  } @else {
+  <p class="alert alert-warning">Nie ma studentów</p>
+  }
 </div>
+}
 <button class="btn btn-primary" (click)="przelaczWidocznosc()">
   {{ widac ? 'Ukryj' : 'Pokaż' }} listę studentów
 </button>
