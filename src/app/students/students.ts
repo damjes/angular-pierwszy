@@ -1,35 +1,35 @@
 import { Component } from '@angular/core';
 
 export type Student = {
-  imie: string;
-  wiek: number;
+	imie: string;
+	wiek: number;
 };
 
 @Component({
-  selector: 'app-students',
-  imports: [],
-  templateUrl: './students.html',
-  styleUrl: './students.sass',
+	selector: 'app-students',
+	imports: [],
+	templateUrl: './students.html',
+	styleUrl: './students.sass',
 })
 export class Students {
-  studenci1: Student[] = [
-    { imie: 'Jan', wiek: 21 },
-    { imie: 'Paweł', wiek: 37 },
-    { imie: 'Drugi', wiek: 2137 },
-  ];
+	studenci1: Student[] = [
+		{ imie: 'Jan', wiek: 21 },
+		{ imie: 'Paweł', wiek: 37 },
+		{ imie: 'Drugi', wiek: 2137 },
+	];
 
-  studenci: Student[] = this.studenci1;
+	studenci: Student[] = this.studenci1;
 
-  czyStudenci: boolean = true;
+	czyStudenci: boolean = true;
 
-  toggleCzyStudenci() {
-    this.czyStudenci = !this.czyStudenci;
-    this.studenci = this.czyStudenci ? this.studenci1 : [];
-  }
+	toggleCzyStudenci() {
+		this.czyStudenci = !this.czyStudenci;
+		this.studenci = this.czyStudenci ? this.studenci1 : [];
+	}
 
-  widac: boolean = true;
+	widac: boolean = true;
 
-  przelaczWidocznosc() {
-    this.widac = !this.widac;
-  }
+	przelaczWidocznosc() {
+		this.widac = !this.widac;
+	}
 }

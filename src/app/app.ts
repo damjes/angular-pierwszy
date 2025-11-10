@@ -5,11 +5,11 @@ import { Formularzowy } from './formularzowy/formularzowy';
 import { Students } from './students/students';
 
 @Component({
-  selector: 'app-root',
-  imports: [Wlasny, Pudelko, Formularzowy, Students],
-  templateUrl: './app.html',
-  styleUrl: './app.sass',
+	selector: 'app-root',
+	imports: [Wlasny, Pudelko, Formularzowy, Students],
+	templateUrl: './app.html',
+	styleUrl: './app.sass',
 })
 export class App {
-  protected readonly title = signal('pierwszy');
+	protected readonly title = signal('pierwszy');
 }
