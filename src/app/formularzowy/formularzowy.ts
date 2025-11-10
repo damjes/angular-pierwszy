@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { NgClass, NgStyle } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Kliker } from '../kliker/kliker';
 
 @Component({
   selector: 'app-formularzowy',
-  imports: [NgClass, NgStyle, FormsModule],
+  imports: [NgClass, NgStyle, FormsModule, Kliker],
   templateUrl: './formularzowy.html',
   styleUrl: './formularzowy.sass',
 })
@@ -15,8 +16,8 @@ export class Formularzowy {
   kolorTlaNaglowka: string = 'lightgray';
   wielokrotnieKlikniete: boolean = false;
 
-  zwieksz() {
-    this.ileRazy++;
+  zwieksz(oIle: number) {
+    this.ileRazy += oIle;
     if (this.ileRazy > 5) {
       this.wielokrotnieKlikniete = true;
     }
