@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 export type Student = {
-	imie: string;
-	wiek: number;
-};
+	imie: string
+	wiek: number
+}
 
 @Component({
 	selector: 'app-students',
@@ -16,20 +16,20 @@ export class Students {
 		{ imie: 'Jan', wiek: 21 },
 		{ imie: 'Paweł', wiek: 37 },
 		{ imie: 'Drugi', wiek: 2137 },
-	];
+	]
 
-	studenci: Student[] = this.studenci1;
+	studenci: Student[] = this.studenci1
 
-	czyStudenci: boolean = true;
+	czyStudenci: boolean = true
 
 	toggleCzyStudenci() {
-		this.czyStudenci = !this.czyStudenci;
-		this.studenci = this.czyStudenci ? this.studenci1 : [];
+		this.czyStudenci = !this.czyStudenci
+		this.studenci = this.czyStudenci ? this.studenci1 : []
 	}
 
-	widac: boolean = true;
+	widac: boolean = true
 
 	przelaczWidocznosc() {
-		this.widac = !this.widac;
+		this.widac = !this.widac
 	}
 }
